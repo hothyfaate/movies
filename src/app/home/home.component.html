@@ -1,0 +1,42 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 my-3">
+            <h2 class="m-5">
+                Trending <br>
+                Movies<br>
+                To watch here 
+            </h2>
+        </div>
+        <div *ngFor="let moviee of tredingMovieAll"class="col-md-2">
+            <div [routerLink]="['/movieDetails',moviee.media_type,moviee.id ]" class="movies my-2">
+                <img [src]="imgSrcs+moviee.poster_path" class="img-fluid">
+                <h4 class="text-center h6 p-2">{{moviee.title}}</h4>
+            </div>
+        </div>
+    
+</div>
+
+
+
+</div>
+<div class="container-fluid pt-5">
+    <div class="row">
+        <div class="col-md-4 my-3">
+            <h2 class="m-5">
+                Trending <br>
+                Tv show<br>
+                To watch here 
+            </h2>
+        </div>
+        <div *ngFor="let moviee of trendingTvAll"class="col-md-2">
+            <div [routerLink]="['/movieDetails',moviee.media_type,moviee.id ]" class="movies">
+                <img [src]="imgSrcs+moviee.poster_path" class="img-fluid">
+                <h4 class="text-center h6 p-2">{{moviee.name}}</h4>
+            </div>
+        </div>
+    
+</div>
+</div>
+
+

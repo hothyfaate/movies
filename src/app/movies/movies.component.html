@@ -1,0 +1,11 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div *ngFor="let movie of trandingMovies" class="col-md-3">
+            <div [routerLink]="['/movieDetails',movie.media_type,movie.id ]"  class="movies">
+                <img [src]="imgSrc+movie.poster_path" class="img-fluid">
+                <h4 class="text-center h6 pt-2">{{movie.title}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
